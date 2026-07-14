@@ -62,17 +62,14 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 13. On the **Conditional launch** tab, review the settings. Select **Next**.
 
-    > [!NOTE]
-    > Here you can set the sign-in security requirements for your access
-    > protection policy. You can select a setting and enter the value that
-    > users must meet to sign in to your company app. Make note of the
-    > various settings but do not change anything.
+  > [!NOTE]
+  > Here you can set the sign-in security requirements for your access protection policy. You can select a setting and enter the value that users must meet to sign in to your company app. Make note of the various settings but do not change anything.
 
 14. On the **Assignments** tab, select **Next**.
 
 15. On the **Review + create** tab, review the settings and select **Create**.
 
-16. Select **Apps**.
+16. Select **Apps** , and then under **Manage apps**, select **Protection**.
 
 17. On the **Apps | Protection** blade, in the details pane, verify that **Outlook - Developers** is listed.
 
