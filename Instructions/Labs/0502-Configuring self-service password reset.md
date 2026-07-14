@@ -59,7 +59,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 3. In the navigation pane, under **Entra ID**, select **Authentication methods**. 
 
-4. Ensure that **SMS** and **Email OTP** show **Yes** in the **Enabled** \(third\) column. 
+4. Ensure that **SMS** and **Email OTP** show **Yes** in the **Enabled** \(third\) column. If either method shows **No**, select the method, and then select **Enable**.
 
 5. In the Microsoft Entra admin center, in the navigation pane, under **Entra ID**, select **Password reset**.
 
@@ -81,7 +81,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 14. In the navigation pane, select **On-premises integration**.
 
-15. Verify that your on-premises writeback client is running.
+15. Verify that your on-premises writeback client is up and running.
 
 16. Close Microsoft Edge.
 
@@ -89,7 +89,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. Switch to **SEA-WS3**.
 
-2. If necessary, sign in as **Admin** with the password of **Pa55w.rd**.
+2. If necessary, sign in as `Admin` with the password of `Pa55w.rd`.
 
 3. On the taskbar, select **Microsoft Edge**.
 
@@ -99,35 +99,33 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 6. On the **Sign in** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-   >**Note**: Please ensure you sign in as Aaron, not Alex.
+   > [!NOTE]
+   > Ensure you sign in as Aaron, not Alex.
 
-7. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
+7. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If prompted to stay signed in, select **No**. If the Microsoft Edge prompts to save the password, select **Save**.
 
 8. On the **My Account** page, in the navigation pane, select **Change Password**.
 
-9. On the **Verify your identity** page, select **Next**.
+9. On the **Pick an account page**, select the **`Aaron@yourtenant.onmicrosoft.com`** account.
 
-10. On the **Enter code** page, enter the verification you recieved in an SMS.
+10. If prompted to **Stay signed in?**, select **No**.
 
-11. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+11. On the **Change password** page, enter the following information and then select **Submit**:
 
-12. If prompted to **Stay signed in?**, select **No**.
-
-13. On the **Change password** page, enter the following information and then select **Submit**:
-
-     - Old password: **Pa55w.rd**
+     - Current password: **Pa55w.rd**
      - New password: **Pa55w.rd1234!**
      - Confirm new password: **Pa55w.rd1234!**
 
-14. If Microsoft Edge prompts to save the password, select **Save**.
+12. If Microsoft Edge prompts to save the password, select **Save**.
 
-15. On the **Success, password changed** dialog, select **Done**.
+13. On the **Success, password changed** dialog, select **Done**.
 
-16. Close Microsoft Edge and sign out of SEA-WS3.
+14. Close Microsoft Edge and sign out of SEA-WS3.
 
 ### Task 4: Run AD Sync
 
-*Note that this step is normally not necessary for password writeback, but is recommended to address issues inherent in lab environments and ensure AD DS is synchronized with Entra ID.*
+> [!NOTE]
+> This step is normally not necessary for password writeback, but is recommended to address issues inherent in lab environments and ensure AD DS is synchronized with Entra ID.
 
 1. Switch to **SEA-SVR1**.
 
@@ -136,7 +134,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 3. At the **Windows PowerShell** command prompt, type the following command, and
     then press **Enter**:
 
-    ```
+    ``` powershell
     Start-ADSyncSyncCycle –PolicyType Delta
     ```
 
@@ -146,16 +144,17 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. Switch to **SEA-CL1** and sign out if necessary.
 
-2. On **SEA-CL1**, select **Other user**, and then attempt to sign in as **Contoso\\Aaron** with the password of **Pa55w.rd**.
+2. On **SEA-CL1**, select **Other user**, and then attempt to sign in as **Contoso\\Aaron** with the password of `Pa55w.rd`.
 
-4. Ensure that you get the message that the user name or password is incorrect.
+3. Ensure that you get the message that the user name or password is incorrect.
 
-5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234!**
+4. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password `Pa55w.rd1234!`.
 
+   > [!NOTE]
    > You should be able to sign in. This confirms that the password you changed in the MyAccount portal is written back to the local Active Directory Domain Services (AD DS) account.
 
-6. Sign out of **SEA-CL1**.
+5. Sign out of **SEA-CL1**.
 
-**Results**: After completing this exercise, you will have successfully configured and validated self-service password reset.
+**Results**: After completing this exercise, you have successfully configured and validated self-service password reset.
 
 **END OF LAB**
