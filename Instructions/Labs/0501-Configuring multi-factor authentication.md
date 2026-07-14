@@ -63,7 +63,7 @@ To provide additional security for user sign on events, you need to configure an
 
 7. In the **Per-user multifactor authentication** page, select **Service settings**. 
 
-8. On the **Service settings** page, scroll down and select the checkbox for **Allow users to remember multi-factor authentication on devices they trust**.
+8. On the **Service settings** page, scroll down and select the checkbox for **Allow users to remember multifactor authentication on devices they trust (between one to 365 days)**.
 
 9. Next to **Number of days users can trust devices for**, enter **30** and then select **Save**. 
 
@@ -151,7 +151,7 @@ To provide additional security for user sign on events, you need to configure an
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter **outlook.office.com** and press Enter.
+3. In the address bar, enter **outlook.cloud.microsoft.com** and press **Enter**.
 
 4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
@@ -181,25 +181,25 @@ To provide additional security for user sign on events, you need to configure an
 
 6. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
 
-7. Under **Assignments**, select **0 users or agents (Preview) selected**.
+7. Under **Assignments**, select **0 users or agents selected**.
 
-8. In the Users and groups pane, select the option next to **Select users and groups** and then select the check box next to **Users and groups**.
+8. Select the option **Select users and groups** and then select the **Users and groups** checkbox.
 
 9. On the **Select users and groups** page, select **Alex Wilber** and then choose **Select**. 
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-10. Select **No target resources selected** and then click **Select resources**.
+10. Select **No target resources selected** and then select **Select resources**.
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
 11. Under **Select specific resources**, select **None**.
 
-12. On the **Resources** page that opens, select the check box next to **Office 365** and then click **Select**.
+12. On the **Resources** page that opens, select the check box next to **Office 365** and then select **Select**.
 
 13. Under **Access controls**, in the **Grant** section, select **0 controls selected**.
 
-14. On the **Grant** page, select **Grant access**, select the check box next to **Require multifactor authentication**, and then click **Select**.
+14. On the **Grant** page, select **Grant access**, select the check box next to **Require multifactor authentication**, and then select **Select**.
 
 15. Under **Enable policy**, select **On**.
 
@@ -213,7 +213,7 @@ To provide additional security for user sign on events, you need to configure an
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter **https://outlook.office.com** and press Enter.
+3. In the address bar, enter **https://outlook.cloud.microsoft.com** and press Enter.
 
 4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
@@ -249,9 +249,9 @@ To provide additional security for user sign on events, you need to configure an
 
 5. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
 
-6. On the **Contoso MFA Policy** page, select **Delete**.
+6. On the **Contoso MFA Policy** page, select **Delete**, then select **Delete** again.
 
-7. At the **Are you sure?** prompt, select **Yes**.
+7. On the **Delete conditional access policy** pane, verify that **Contoso MFA Policy** is listed, and then on the **Delete selected conditional access policy** prompt, select **Delete**.
 
 8. Close Microsoft Edge.
 
