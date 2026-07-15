@@ -54,7 +54,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 5. On the **Devices | Overview** page, in the **Manage devices** section, select **Group Policy analytics**.
 
-6. On the **Devices | Group Policy analytics** blade, select **Import**.
+6. On the **Devices | Group Policy analytics** page, select **Import**.
 
 7. On the **Import GPO files** page, select the **Select a file** field.
 
@@ -66,7 +66,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
    > The Windows Client Policy GPO is imported and analyzed. It may take a few minutes to complete.
 
-10. On the **Devices | Group Policy analytics** blade, review the information next to **Windows Client Policy**.
+10. On the **Devices | Group Policy analytics** page, review the information next to **Windows Client Policy**.
 
     > Notice that 86% of the settings have MDM support.
 
@@ -88,7 +88,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
    > There should be a number of policies ready for migration and a number of policies not supported.
 
-5. On the **Reports | Group policy analytics** blade, select the **Reports** tab, and then select **Group policy migration readiness**.
+5. On the **Reports | Group policy analytics** page, select the **Reports** tab, and then select **Group policy migration readiness**.
 
    > The **Group policy migration readiness** report provides information related to each setting, and the **Policy type** supported.
 
