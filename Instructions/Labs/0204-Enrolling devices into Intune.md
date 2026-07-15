@@ -142,9 +142,9 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 4. In the navigation pane, select **Devices**.
 
-5. On the **Devices | Overview** blade, under **Manage devices by platform**, verify that **1** is displayed under **Windows**. It may take a while to display.
+5. On the **Devices | Overview** page, under **Manage devices by platform**, verify that **1** is displayed under **Windows**. It may take a while to display.
 
-6. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
+6. On the **Devices | Overview** page, select **All devices** and verify that **SEA-WS1** is listed.
 
 7. Note that for **SEA-WS1**, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**.
 
