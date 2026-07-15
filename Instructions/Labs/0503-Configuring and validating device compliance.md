@@ -53,7 +53,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 5. From the navigation pane select **Devices**, then under **Manage devices**, select **Compliance**.
 
-6. On the **Devices | Compliance** blade, in the details pane select **+ Create policy**.
+6. On the **Devices | Compliance** page, select **+ Create policy**.
 
 7. On the **Create a policy** blade, provide the following value and select **Create**:
 
