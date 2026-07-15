@@ -84,7 +84,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 2. In the details pane, select **SEA-WS1**.
 
-3. On the **SEA-WS1** blade, select **Sync** and when prompted select **Yes**.
+3. On the **SEA-WS1** page, select **Sync** and when prompted select **Yes**.
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
@@ -149,11 +149,11 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 1. On **SEA-SVR1**, in the **Microsoft Intune admin center**, select **Apps**.
 
-2. In the **Apps | Overview** blade, select **All Apps**. In the details pane, select **Create**.
+2. In the **Apps | Overview** page, select **All Apps**. In the details pane, select **Create**.
 
 3. In the **Select app type** pane, in the **Platform** drop-down menu, select **Windows**. For **App type**, under **Microsoft 365 Apps**, select **Microsoft 365 Apps Windows 10 and later** and then select **Select**.
 
-4. On the **Add Microsoft 365 Apps** blade, configure the following options and select **Next**:
+4. On the **Add Microsoft 365 Apps** page, configure the following options and select **Next**:
 
     - Suite Name: **Microsoft 365 Apps (Research)**
 
@@ -183,7 +183,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 8. On the **Assignments** tab, in the **Required** section, select **Add group**.
 
-9. On the **Select groups** blade, select **Research**, and then choose **Select**.
+9. On the **Select groups** page, select **Research**, and then choose **Select**.
 
 10. Select **Next**. On the **Review + Create** tab, select **Create**.
 
@@ -228,7 +228,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 2. In the **Microsoft Intune admin center**, select **Apps**.
 
-3. On the **Apps | Overview** blade, select **Monitor** and then select **App install status**.
+3. On the **Apps | Overview** page, select **Monitor** and then select **App install status**.
 
 4. In the **App install status** page, select **Microsoft 365 Apps \(Research\)**.
 
@@ -248,11 +248,11 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 7. In the **Microsoft Intune admin center**, select **Devices**.
 
-8. On the **Devices | Overview** blade, select **All devices** and then in the details pane, select **SEA-WS1**.
+8. On the **Devices | Overview** page, select **All devices** and then in the details pane, select **SEA-WS1**.
 
-9. On the **SEA-WS1** blade, select **Managed Apps**.
+9. On the **SEA-WS1** page, select **Managed Apps**.
 
-10. On the **SEA-WS1 | Managed Apps** blade, in the details pane, select **Microsoft 365 Apps (Research)**.
+10. On the **SEA-WS1 | Managed Apps** page, in the details pane, select **Microsoft 365 Apps (Research)**.
 
    > On the **Microsoft 365 Apps (Research) - Installation details**
    > window, you can see the entire lifecycle of the application:
