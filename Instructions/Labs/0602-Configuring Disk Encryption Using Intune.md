@@ -23,8 +23,6 @@ The following lab(s) must be completed before this lab:
 
 - 0301-Creating and Deploying Configuration Profiles
 
-  Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
-
 ### Scenario
 
 It's been determined that all the information on SEA-WS1 should be encrypted. You've been asked to configure full disk encryption on SEA-WS1 and require additional PIN authentication at startup.
@@ -35,7 +33,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
+3. In Microsoft Edge, type `https://intune.microsoft.com` in the address bar, and then press **Enter**.
 
 4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
@@ -43,14 +41,14 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 6. On the **Endpoint security | Overview** page, select **Disk encryption**.
 
-7. On the **Endpoint security | Disk encryption** blade, in the details pane, select **+ Create Policy**.
+7. On the **Endpoint security | Disk encryption** page, select **+ Create Policy**.
 
 8. In the **Create a profile** page, select the following options, and then select **Create**:
 
     -   Platform: **Windows**
     -   Profile: **BitLocker**
 
-9. On the **Basics** page, enter the following information, and then select **Next**:
+9. On the **Basics** tab, enter the following information, and then select **Next**:
 
     -   Name: **Contoso BitLocker**
     -   Description: **Enable BitLocker for all devices**
@@ -59,27 +57,28 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
      - Require Device Encryption: **Enabled**
 
-  >**Note**: Please ensure you have expanded the **BitLocker** section and enabled the option before moving on to the next step. Your policy will be ineffective unless this option is configured.
+   > [!NOTE]
+   > Ensure you have expanded the **BitLocker** section and enabled the option before moving on to the next step. Your policy is ineffective unless this option is configured.
 
 11. On the **Configurations settings** tab, scroll down to **Operating System Drives** and then configure the following options, leaving all other options to their defaults:
 
      - Enforce drive encryption type on operating system drives: **Enabled**
      - Require additional authentication at startup: **Enabled**
      - Configure minimum PIN length for startup: **Enabled**
-     - Choose how Bitlocker-protected operating system drives can be recovered: **Enabled**
-     - Do not enable Bitlocker until recovery information is stored to AD DS for operating system drives: **True**
+     - Choose how BitLocker-protected operating system drives can be recovered: **Enabled**
+     - Do not enable BitLocker until recovery information is stored to AD DS for operating system drives: **True**
      - Omit recovery options from the BitLocker setup wizard: **True**
-     - Save Bitlocker recovery information to AD DS for operating system drives: **True**
+     - Save BitLocker recovery information to AD DS for operating system drives: **True**
 
-12. On the **Configurations settings** page, select **Next**.
+12. On the **Configurations settings** tab, select **Next**.
 
-13. On the **Scope tags** page, select **Next**.
+13. On the **Scope tags** tab, select **Next**.
 
-14. On the **Assignments** tab, search for **Contoso** and then select **Contoso Developer devices**, and then select **Next**.
+14. On the **Assignments** tab, search for **Contoso**, select **Contoso Developer devices**, and then select **Next**.
 
-16. On the **Review + create** page, select **Save**.
+15. On the **Review + create** tab, select **Create**.
 
-17. Close all open windows on **SEA-SVR1**.
+16. Close all open windows on **SEA-SVR1**.
 
 ### Task 2: Verify and enable BitLocker settings
 
@@ -89,19 +88,22 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 3. In the **Settings** app, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**. Select **Sync**.
+4. In the **Access work or school** section, expand the **Connected to Contoso's Azure AD** account and then select **Info**. Select **Sync**.
 
 5. Select the **Encryption needed** notification.
 
-   _Note: It may take some time until the notification shows up. Windows Focus Assist may also prevent the notification from appearing. You can check notifications manually._
+   > [!NOTE]
+   > It may take some time until the notification shows up. Windows Focus Assist may also prevent the notification from appearing. You can check notifications manually.
 
-6. On the **Are you ready to start encryption?** dialog, select the checkbox next to **I don't have any other disk encryption software installed, encrypt all my disks**, and select **Yes**.
+6. On the **Are you ready to start encryption?** dialog, select the checkbox next to **I don't have any other disk encryption software installed, encrypt all my disks**, and then select **Yes**.
 
-7. On the **Choose how to unlock your drive at startup?** page, select **Enter a PIN**
+7. On the **Choose how to unlock your drive at startup?** page, select **Enter a PIN**.
 
 8. On the **Enter a PIN** page, in the **PIN** and **Reenter PIN** boxes, enter **123456**, and then select **Set PIN**.
 
-9. On the **Choose how much of your drive to encrypt** page, select **Encrypt used disk space only** and select **Next**.
+9. On the **How do you want to back up your recovery key?** page, select **Next**.
+
+10. On the **Choose how much of your drive to encrypt** page, select **Encrypt used disk space only (faster and best for new PCs and drives)** and select **Next**.
    
 11. On the **Choose which encryption mode to use** page, ensure that **New encryption mode (best for fixed drives on this device)** is selected, and then select **Next**.
     
@@ -119,10 +121,10 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 3. In the navigation pane, right-click **Local Disk (C:)**, select **Show more options**, and then select **Manage BitLocker**.
 
-4. In the **BitLocker Drive Encryption** window, ensure that you see **C: BitLocker on** status. This means that drive is encrypted. 
+4. In the **BitLocker Drive Encryption** window, ensure that you see the **C: BitLocker on** status. This means that the drive is encrypted.
 
 5. Close all open windows and sign out of **SEA-WS1**.
 
-**Results**: After completing this exercise, you will have successfully configured disk encryption by using Intune.
+**Results**: After completing this exercise, you have successfully configured disk encryption by using Intune.
 
 **END OF LAB**
