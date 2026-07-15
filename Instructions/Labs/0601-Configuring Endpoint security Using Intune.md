@@ -25,9 +25,6 @@ The following lab(s) must be completed before this lab:
 
 - 0301-Creating and Deploying Configuration Profiles
 
-  > [!NOTE]
-  > You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
-
 ### Scenario
 
 You've been asked to ensure that the Contoso Developers Group have Microsoft Defender correctly configured. It's been requested that:
