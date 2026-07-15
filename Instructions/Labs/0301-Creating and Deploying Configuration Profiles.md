@@ -86,9 +86,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 6. On the **Devices** page, under the **Manage devices** section, select **Configuration**.
 
-7. On the **Devices | Configuration** blade, in the **Policies** tab, select **+ Create**, and then select **+ New policy**.
+7. On the **Devices | Configuration** page, in the **Policies** tab, select **+ Create**, and then select **+ New policy**.
 
-8. In the **Create a profile** blade, select the following options, and then select **Create**:
+8. In the **Create a profile** page, select the following options, and then select **Create**:
 
    - Platform: **Windows 10 and later**
    - Profile type: **Templates**
@@ -119,7 +119,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
     `DevBuild.exe`
 
-18. Select **Next** three times until you reach the **Review + create** blade. Select **Create**.
+18. Select **Next** three times until you reach the **Review + create** page. Select **Create**.
 
 ### Task 3: Create the Contoso Developer device group
 
@@ -127,9 +127,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 2. Select **All groups**.
 
-3. On the **Groups | All groups** blade, select **New group**.
+3. On the **Groups | All groups** page, select **New group**.
 
-4. On the **New Group** blade, enter and select the following information:
+4. On the **New Group** page, enter and select the following information:
 
    - Group type: **Security**
    - Group name: `Contoso Developer devices`
@@ -138,19 +138,19 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 5. Under **Members**, select **No members selected**.
 
-6. On the **Add members** blade, in the **Search** box, type `Sea`.
+6. On the **Add members** page, in the **Search** box, type `Sea`.
 
 7. Select **SEA-WS1**, and then select **Select**.
 
-8. On the **New Group** blade, select **Create**.
+8. On the **New Group** page, select **Create**.
 
-9. On the **Groups | All groups** blade, verify that the **Contoso developer devices** group is displayed. If necessary, select **Refresh**.
+9. On the **Groups | All groups** page, verify that the **Contoso developer devices** group is displayed. If necessary, select **Refresh**.
 
 ### Task 4: Create a dynamic Microsoft Entra ID device group
 
-1. On the **Groups | All Groups** blade, on the details pane, select **New group**.
+1. On the **Groups | All Groups** page, on the details pane, select **New group**.
 
-2. On the **Group** blade, provide the following values:
+2. On the **Group** page, provide the following values:
 
    - Group type: **Security**
    - Group name: `Windows Devices`
@@ -158,7 +158,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 3. Under the **Dynamic Device Members** section, select **Add dynamic query**.
 
-4. On the **Dynamic membership rules** blade, in the **Rule syntax** section, select **Edit**.
+4. On the **Dynamic membership rules** page, in the **Rule syntax** section, select **Edit**.
 
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
@@ -166,7 +166,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
    (device.deviceOSType -contains "Windows")
    ```
 
-6. On the **Dynamic membership rules** blade, select **Save**.
+6. On the **Dynamic membership rules** page, select **Save**.
 
 7. On the **New Group** page, select **Create**.
 
@@ -174,17 +174,17 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**.
 
-2. On the **Devices** blade, under the **Manage devices** section, select **Configuration**.
+2. On the **Devices** page, under the **Manage devices** section, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer - standard** profile.
+3. On the **Devices | Configuration** page, in the details pane, select the **Contoso Developer - standard** profile.
 
-4. On the **Contoso Developer - standard** blade, scroll down to the **Assignments** section, and select **Edit**.
+4. On the **Contoso Developer - standard** page, scroll down to the **Assignments** section, and select **Edit**.
 
 5. On the Assignments page, under **Included groups** select **Add groups**.
 
-6. On the **Select groups to include** blade, in the **Search** box, select **Contoso Developer devices** and then select **Select**.
+6. On the **Select groups to include** page, in the **Search** box, select **Contoso Developer devices** and then select **Select**.
 
-7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
+7. Back on the **Device restrictions** page, select **Review + save**, then select **Save**.
 
 8. In the Microsoft Intune admin center, select **Devices** in the breadcrumb navigation menu.
 
@@ -236,9 +236,9 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and under the **Manage devices** section, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the **Policies** tab, select **Contoso Developer - standard**.
+3. On the **Devices | Configuration** page, in the **Policies** tab, select **Contoso Developer - standard**.
 
-4. On the **Contoso Developer - standard** blade, scroll down to the **Configuration settings** section, and then select **Edit**.
+4. On the **Contoso Developer - standard** page, scroll down to the **Configuration settings** section, and then select **Edit**.
 
 5. On the **Device restrictions** page, expand **Control Panel and Settings**.
 
@@ -252,7 +252,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 2. In the details pane, select **SEA-WS1**.
 
-3. On the **SEA-WS1** blade, select **Sync** and when prompted select **Yes**.
+3. On the **SEA-WS1** page, select **Sync** and when prompted select **Yes**.
 
    > [!NOTE]
    > Intune contacts the device and tells it to synchronize all policies. This may take up to 5 minutes.
