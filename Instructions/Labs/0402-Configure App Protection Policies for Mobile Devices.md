@@ -34,9 +34,9 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 5. On the **Microsoft Intune admin center** page, select **Apps**.
 
-6. On the **Apps | Overview** blade, under **Manage apps**, select **Protection**.
+6. On the **Apps | Overview** page, under **Manage apps**, select **Protection**.
 
-7. In the **Apps | Protection** blade, select **Create** and then select **iOS/iPadOS**.
+7. In the **Apps | Protection** page, select **Create** and then select **iOS/iPadOS**.
 
 8. On the **Basics** tab, configure the following options and select **Next**:
 
@@ -71,7 +71,7 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 16. Select **Apps** , and then under **Manage apps**, select **Protection**.
 
-17. On the **Apps | Protection** blade, in the details pane, verify that **Outlook - Developers** is listed.
+17. On the **Apps | Protection** page, verify that **Outlook - Developers** is listed.
 
 18. Close Microsoft Edge.
 
