@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Practice Lab 0801: Deploying Windows with Autopilot'
-  description: In this lab you will learn how provision a Windows 11 device with Autopilot using User-driven mode.
+  description: In this lab you will learn how to provision a Windows 11 device with Autopilot using User-driven mode.
   duration: 30 minutes
   level: 200
   islab: true
@@ -34,27 +34,27 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, in the address bar, type **https://entra.microsoft.com**, and then press **Enter**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`** and the default tenant password.
+3. In Microsoft Edge, in the address bar, type `https://entra.microsoft.com`, and then press **Enter**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`** and the default tenant password.
 
-4. In the navigation pane, Expand **Entra ID**.
+4. In the navigation pane, expand **Entra ID**.
 
-5. Select **Groups** and then select **All groups**.
+5. Select **Groups**, and then select **All groups**.
 
-6. In the **Groups | All groups** blade, select **New group**.
+6. In the **Groups | All groups** page, select **New group**.
 
-7. In the **New Group** blade, in the **Group type** list, select **Security**.
+7. In the **New Group** page, next to the **Group type** drop-down list, select **Security**.
 
-8. In the **Group name** box, type **IT Devices**.
+8. In the **Group name** box, type `IT Devices`.
 
-9. In the **Group description** box, type **IT Department Devices**.
+9. In the **Group description** box, type `IT Department Devices`.
 
-10. In the **Membership type** list, select **Dynamic Device**.
+10. In the **Membership type** drop-down list, select **Dynamic Device**.
 
 11. Select **Add dynamic query**.
 
-12. On the **Dynamic membership rules** blade select **Edit** above the **Rule syntax** box.
+12. On the **Dynamic membership rules** page, select **Edit** above the **Rule syntax** box.
 
-13. In the Edit rule syntax text box, add the following simple membership rule and select **OK**.
+13. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
     ```cmd
     (device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))
@@ -74,7 +74,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
     Install-Script -Name Get-WindowsAutoPilotInfo
     ```
 
-4. You will receive three prompts. Each time, type **Y**, and then press **Enter**.
+4. You receive three prompts. Each time, type `Y`, and then press **Enter**.
 
 5. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
@@ -102,35 +102,40 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 2. In **Microsoft Edge**, navigate to **https://intune.microsoft.com**. Sign in with your **`Admin@yourtenant.onmicrosoft.com`** account.
 
-    >Note: You may be prompted to register for MFA. Follow the same procedures you used earlier in the course to add your phone number.
+   > [!NOTE]
+   > You may be prompted to register for MFA. Follow the same procedures you used earlier in the course.
 
-3. In the **Microsoft Intune admin center**, select **Devices**.
+3. If prompted to **Stay signed in?**, select **No**.
 
-4. In the **Device onboarding** section, select **Enrollment**. 
+4. In the **Microsoft Intune admin center**, select **Devices**.
 
-5. In the **Windows** tab, scroll down to **Windows Autopilot**, and then select **Devices**.
+5. In the **Device onboarding** section, select **Enrollment**.
 
-6. In the **Windows Autopilot devices** blade on the menu bar, select **Import**, select the **folder icon** and then browse to **C:\\**, select **Computer.csv**, select **Open**, and then select **Import**. 
+6. In the **Windows** tab, scroll down to **Windows Autopilot**, and then select **Devices**.
 
-   _Note: The import process can take up to 15 minutes, but normally takes around 5 minutes._  
+7. In the **Windows Autopilot devices** page on the menu bar, select **Import** from the command bar. Select the **folder icon**, browse to **C:\\**, select **Computer.csv**, and then select **Open**. Finally, select **Import**. 
 
-   _**Important**: After the process is complete, the device may not show automatically. If this is the case, select the **Refresh** button. If the device still does not appear, select the **Sync** button, wait a few minutes, and then select **Refresh**._
+   > [!NOTE]
+   > The import process can take up to 15 minutes, but normally takes around 5 minutes.
 
-7. Select **X** to close the **Windows Autopilot devices** blade. 
+   > [!IMPORTANT]
+   > After the process is complete, the device may not show automatically. If this is the case, select the **Refresh** button. If the device still does not appear, select the **Sync** button, wait a few minutes, and then select **Refresh**.
 
-8. On the Windows enrollment blade, in the details pane, select **Deployment Profiles**.
+8. Select **X** to close the **Windows Autopilot devices** page.
 
-9. On the **Windows AutoPilot deployment profiles** blade, select **+ Create profile** and then select **Windows PC**.
+9. On the **Windows Autopilot** section, in the details pane, select **Deployment profiles**.
 
-10. In the **Basics** tab, in the **Name** text box, type **Contoso profile1**.
+10. On the **Windows AutoPilot deployment profiles** page, select **+ Create profile** and then select **Windows PC**.
 
-11. For **Convert all targeted devices to Autopilot** select **No**, and then select **Next**.
+11. In the **Basics** tab, next to the **Name** text box, type `Contoso profile1`.
 
-12. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **User-Driven**.
+12. For **Convert all targeted devices to Autopilot** select **No**, and then select **Next**.
 
-13. Ensure that **Join to Entra ID as** is set to **Microsoft Entra joined**.
+13. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **User-Driven**.
 
-14. Ensure that the following options are set:
+14. Ensure that **Join to Entra ID as** is set to **Microsoft Entra joined**.
+
+15. Ensure that the following options are set:
 
     - Microsoft Software License Terms: **Hide**
 
@@ -148,48 +153,49 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
     - Apply device name template: **No**
 
-15. Select **Next**.
+16. Select **Next**.
 
-16. On the **Assignments** tab, under **Included groups** select **Add groups**.
+17. On the **Assignments** tab, under **Included groups** select **Add groups**.
 
-17. Select the **IT Devices** group and click **Select**. Select **Next**.
+18. Select the **IT Devices** group and select **Select**. Select **Next**.
 
-18. On the **Review + create** tab, review the information and then select **Create**.
+19. On the **Review + create** tab, review the information and then select **Create**.
 
-19. Close **Microsoft Edge**
+20. Close **Microsoft Edge**.
 
 ### Task 4: Reset the PC
 
-1. On **SEA-WS3**, select **Start**, type **reset** and select **Reset this PC**.
+1. On **SEA-WS3**, select **Start**, type `reset`, and then select **Reset this PC**.
 
 2. In the **System > Recovery** page, select **Reset PC**.
 
 3. Select **Remove everything**, and then select **Local reinstall**.
 
-4. Select **Next** and then select **Reset**.
+4. Select **Next**, and then select **Reset**.
 
-   >Note: Normally this task is not required for new deployment of physical devices. The device’s autopilot info is either provided by the manufacturer or can be obtained from the device prior to the OOBE. For the purposes of this lab, we must initiate a reset to simulate a new device OOBE.
+   > [!NOTE]
+   > Normally this task is not required for new deployment of physical devices. The device's autopilot info is either provided by the manufacturer or can be obtained from the device prior to the OOBE. For the purposes of this lab, we must initiate a reset to simulate a new device OOBE.
 
-   >Note: This process can take 30-45 minutes and will reboot several times during the process. 
+   > [!NOTE]
+   > This process can take 30-45 minutes and will reboot several times during the process.
 
 ### Task 5: Verify Autopilot deployment
 
 1. At the **Let's set things up for your work or school** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and select **Next**.
 
-2. At the Password page, enter **Pa55w.rd1234!** and select **Sign in**.
+2. At the **Password** page, enter `Pa55w.rd1234!` and select **Sign in**.
 
-3. At the **Use Windows Hello with your account**, select **OK**.
+3. At the **Use Windows Hello with your account** page, select **OK**.
 
 4. At the **Verify your identity** page, select the Text verification method.
 
 5. At the **Enter code** page, enter the code that has been texted to your mobile device and then select **Verify**.
 
-6. On the **Setup up a PIN** dialog box, in the **New PIN** and **Confirm PIN** fields, enter **102938**, and then select **OK**.
+6. On the **Setup up a PIN** dialog box, in the **New PIN** and **Confirm PIN** fields, enter `102938`, and then select **OK**.
 
 7. On the **All set!** page, select **OK**.
 
 8. Select **Start** and select **Settings**. 
-
 
 9. Select **Accounts**, and then select **Access work or school**. Verify the device is connected to Contoso's Azure AD.
 
@@ -201,7 +207,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 13. Switch to **SEA-SVR1**.
 
-14. In the Microsoft Entra admin center, expand **Entra ID**, expand **Devices** and then select **All devices**. 
+14. In the Microsoft Entra admin center, expand **Entra ID**, select **Devices**, and then select **All devices**. 
 
     > Note that the new device displays with an icon that indicates an Autopilot device. Also note that the Join Type is **Microsoft Entra joined** with Aaron Nicholls as the owner.
 
@@ -215,6 +221,6 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 18. Close Microsoft Edge.
 
-**Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot using User-driven mode.
+**Results**: After completing this exercise, you have provisioned a Windows device with Autopilot using User-driven mode.
 
 **END OF LAB**
