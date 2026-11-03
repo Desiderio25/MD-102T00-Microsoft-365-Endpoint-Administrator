@@ -26,7 +26,7 @@ The **AllFiles (F:)** drive holds the files you use in the labs, such as the Gro
 
 ## How the labs work
 
-- **Start with Lab 01.** It's the foundational lab. It sets up identity, enrollment, and the free 90-day Intune Suite trial that later labs use, and every later lab assumes it's complete.
+- **Start with Lab 01.** It's the foundational lab. It sets up identity and enrollment, and every later lab assumes it's complete. Use the lab tenant's existing licenses; you don't need to activate an Intune Suite trial when the required capabilities are already included. See Lab 01 for licensing guidance.
 - **Expect sync delays.** Policies, apps, and device status can take minutes to hours to apply. Force a device sync when a lab suggests it. Endpoint analytics and Advanced Analytics need 24 to 48 hours of device telemetry, and Microsoft Defender for Endpoint provisioning can take several hours.
 - **Each exercise ends with a result you can check.** Confirm it before you move on, because later exercises build on it.
 

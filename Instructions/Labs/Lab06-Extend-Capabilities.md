@@ -46,7 +46,7 @@ By the end of this lab, you'll have:
 
 This lab requires:
 - Completion of **Lab 01** (devices enrolled)
-- **Microsoft Intune Suite trial active** (activated in **Lab 01** prerequisites) — required for Endpoint Privilege Management, Remote Help, and Advanced Analytics
+- Access to **Endpoint Privilege Management, Remote Help, and Advanced Analytics** through Microsoft 365 E5 or appropriate Intune add-on licenses. Microsoft 365 E3 includes Remote Help and Advanced Analytics, but not Endpoint Privilege Management; no trial is needed for capabilities already licensed (see **Lab 01** licensing guidance)
 - Access to the Contoso Microsoft 365 tenant (`<TenantPrefix>.onmicrosoft.com`)
 - Global Administrator or Intune Administrator credentials
 - **SEA-DEV1**, **SEA-DEV2**, and **SEA-DEV3** (enrolled Windows 11 devices)
@@ -57,11 +57,11 @@ This lab requires:
 
 ### Scenario
 
-Endpoint Privilege Management allows standard users to run specific applications with elevated privileges without granting full administrator rights. With the Intune Suite trial active (from **Lab 01** prerequisites), EPM is already provisioned in your tenant. You'll verify it's available, create elevation settings and rules policies, and test different elevation scenarios.
+Endpoint Privilege Management allows standard users to run specific applications with elevated privileges without granting full administrator rights. Use your tenant's existing EPM entitlement; no Intune Suite trial is needed when EPM is already included. You'll verify it's available, create elevation settings and rules policies, and test different elevation scenarios.
 
 ### Task 1: Verify Endpoint Privilege Management is available
 
-**Endpoint Privilege Management** is one of the Microsoft Intune Suite add-on capabilities. With the Suite trial activated in **Lab 01** prerequisites, EPM is already provisioned in your tenant — there is no separate tenant-wide "Enable EPM" toggle. Instead, you enable EPM on individual devices by deploying a **Windows elevation settings policy** with the **Endpoint Privilege Management** setting set to **Enabled** (you'll do that in Task 2).
+**Endpoint Privilege Management** is included in Microsoft 365 E5 and is also available through Intune add-on licensing. There is no separate tenant-wide "Enable EPM" toggle. Instead, you enable EPM on individual devices by deploying a **Windows elevation settings policy** with the **Endpoint Privilege Management** setting set to **Enabled** (you'll do that in Task 2).
 
 1. In the **Microsoft Intune admin center**, navigate to **Endpoint security** → **Endpoint Privilege Management**.
 
@@ -73,7 +73,7 @@ Endpoint Privilege Management allows standard users to run specific applications
    - **Elevation requests** (live and historical support-approved elevation requests)
 
    > [!IMPORTANT]
-   > If the EPM blade shows a licensing banner, return to **Lab 01 prerequisites** and complete the Microsoft Intune Suite trial activation before continuing.
+   > If the EPM blade shows a licensing banner, ask your instructor or lab provider to verify the tenant's EPM entitlement and license assignments before continuing. See **Lab 01** licensing guidance; don't activate a trial for a capability already included in your subscription.
 
 **You have successfully verified Endpoint Privilege Management is available.**
 
@@ -328,7 +328,7 @@ Remote Help provides secure, audited remote assistance for enrolled devices. IT 
 
 ### Task 2: Assign Remote Help licenses
 
-Remote Help requires Microsoft Intune Suite licensing.
+Remote Help requires a license that includes Remote Help for both helpers and sharers. Microsoft 365 E3 and E5 include this capability; a separate Intune Suite license isn't required when Remote Help is already included.
 
 1. In **Microsoft Edge**, navigate to **`https://admin.cloud.microsoft`**.
 
@@ -340,7 +340,7 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 1. Select the **Licenses and apps** tab.
 
-1. Verify **Microsoft Intune Suite** is assigned (or assign it if not present).
+1. Verify a license that includes **Remote Help** (such as **Microsoft 365 E3** or **Microsoft 365 E5**) is assigned and its Remote Help service is enabled. If not, ask your instructor or lab provider to verify the user's license assignment.
 
 1. Repeat for **Joni Sherman** (sharer role—end user receiving help) and for **Lee Gu** (Pharmacy Helpdesk role).
 
@@ -519,10 +519,10 @@ The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** gra
 
 **Advanced Analytics** (part of Intune Suite and other eligible Intune advanced capability licenses) provides ML-powered insights into device performance, anomaly detection, and resource utilization. **Device Query** uses Kusto Query Language (KQL) to run ad-hoc queries against Windows device telemetry — either against a single device (live) or across many devices. This is the upper-intermediate replacement for "please run remote desktop and check" — a delegated admin can answer real support questions without ever touching a user's device.
 
-The Intune Suite trial activated in **Lab 01** includes Advanced Analytics, so this exercise is fully hands-on.
+Microsoft 365 E3 and E5 include Advanced Analytics, so this exercise is fully hands-on without activating an Intune Suite trial when using those entitlements.
 
 > [!IMPORTANT]
-> Device Query requires an active Intune Suite trial or another license that includes Intune Advanced Analytics. The device must also be enrolled in Endpoint Analytics.
+> Device Query requires a license that includes Intune Advanced Analytics, such as Microsoft 365 E3 or E5. The device must also be enrolled in Endpoint Analytics.
 
 > [!NOTE]
 > Empty results are normal on a fresh tenant until a Windows device checks in to Endpoint Analytics and returns the required inventory.

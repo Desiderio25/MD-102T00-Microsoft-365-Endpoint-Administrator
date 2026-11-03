@@ -54,28 +54,12 @@ This lab requires:
 
 ---
 
-> [!IMPORTANT]
-> **Activate the Microsoft Intune Suite 90-day trial now.** Labs 03, 04, and 06 require Intune Suite features. The trial is free and doesn't require a payment method. You can start it only once per tenant. If it's already active, skip these steps.
+> [!NOTE]
+> **Use the lab tenant's existing licenses.** You don't need to activate an Intune Suite trial or assign a separate Intune Suite license when the required capabilities are already included in your Microsoft 365 subscription.
 >
-> 1. In the **Microsoft Intune admin center** (`intune.microsoft.com`), select **Tenant administration**, and then select **Intune add-ons**.
-> 2. Ensure you are on the **All add-ons** tab.
-> 3. In the row for **Microsoft Intune Suite**, under the **Try or Buy** column, select **View details**. If the **Try or Buy** column isn't visible, scroll horizontally.
-> 4. In the details pane, select **To try or buy, go to Microsoft 365 admin center**. A new tab opens to the Microsoft 365 admin center product page.
-> 5. On the **Microsoft Intune Suite** offer page, select **Start free trial**.
-> 6. On the **Checkout** page, confirm: **Microsoft Intune Suite Trial**, 90-day term, 250 licenses, **USD 0.00**, no payment method required.
-> 7. Select **Edit**, fill the organization profile form with the following information, then select **Save**:
-> - **First name**: MOD
-> - **Last name**: Administrator1 (the form rejects `Administrator`)
-> - **Address line 1**: 1 Microsoft Way
-> - **City**: Redmond
-> - **State**: Washington
-> - **ZIP**: 98052
-> - **Phone**: 425-555-1234
-> - **Email address**: admin@<TenantPrefix>.onmicrosoft.com
-> 8. After the organization profile is saved, select **Try now** to activate the trial.
-> 9. Return to the Intune admin center and refresh the **Intune add-ons** page. On the **Your add-ons** tab, confirm that **Microsoft Intune Suite Trial** appears with a **Purchased quantity** of **250**. This can take a few minutes.
+> Microsoft 365 E3 includes Remote Help and Advanced Analytics. Microsoft 365 E5 also includes Endpoint Privilege Management, Enterprise Application Management (Enterprise App Catalog), and Cloud PKI. E3 alone doesn't include all the capabilities used in Labs 03, 04, and 06. For current entitlements, see [Microsoft Intune plans and pricing](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing).
 >
-> On the **All add-ons** tab, the individual add-ons still show **Available for trial or purchase**. That's expected because the Suite trial includes them.
+> If a required capability is unavailable, ask your instructor or lab provider to verify the tenant's licensing and user assignments before continuing. A trial is only an option for a tenant that lacks the required entitlement, not a prerequisite for these labs.
 
 ---
 

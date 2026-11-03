@@ -46,7 +46,7 @@ This lab requires:
 - **SEA-DEV1** (enrolled device, Megan Bowen signed in)
 - **SEA-DEV2** (enrolled device, Joni Sherman signed in)
 - Internet access on **SEA-DEV1** to download the official 7-Zip installer directly from **7-zip.org** for **Exercise 2** — there's no pre-packaged app asset; you download the real installer yourself
-- **Microsoft Intune Suite trial active** (activated in **Lab 01** prerequisites) — required for Exercise 4 (Enterprise App Catalog)
+- Access to **Enterprise App Catalog** for Exercise 4, included in Microsoft 365 E5 or an appropriate Intune add-on license; no trial is needed when already licensed (see **Lab 01** licensing guidance)
 
 ---
 
