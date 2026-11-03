@@ -47,7 +47,7 @@ This lab requires:
 - Completion of **Lab 01** (devices enrolled)
 - Access to the Contoso Microsoft 365 tenant (`<TenantPrefix>.onmicrosoft.com`)
 - **Microsoft 365 E5** licensing (includes Defender for Endpoint P2)
-- **Microsoft Intune Suite trial active** (activated in **Lab 01** prerequisites) — required for Cloud PKI (Exercise 5). Microsoft Tunnel (Exercise 4) is included in Intune Plan 1 and doesn't require the Suite, but it does require the **LIN-SRV1** Ubuntu server
+- Access to **Cloud PKI** for Exercise 5, included in Microsoft 365 E5 or an appropriate Intune add-on license; no trial is needed when already licensed (see **Lab 01** licensing guidance). Microsoft Tunnel (Exercise 4) is included in Intune Plan 1 and doesn't require the Suite, but it does require the **LIN-SRV1** Ubuntu server
 - Global Administrator or Intune Administrator credentials
 - **SEA-DEV1** and **SEA-DEV2** (enrolled Windows 11 devices)
 - **LIN-SRV1** (Ubuntu 22.04 server for Microsoft Tunnel Gateway)
@@ -763,7 +763,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
 ### Scenario
 
-Microsoft Cloud PKI (part of the Intune Suite and Microsoft 365 E5) provides a cloud-hosted certificate authority for issuing certificates to devices and users. You'll create a root CA, an issuing CA anchored to it, and a SCEP certificate profile for device authentication (e.g., for Wi-Fi, VPN, or S/MIME encryption). With the Suite trial active (from **Lab 01** prerequisites) or an E5 license, this exercise is fully hands-on.
+Microsoft Cloud PKI (part of the Intune Suite and Microsoft 365 E5) provides a cloud-hosted certificate authority for issuing certificates to devices and users. You'll create a root CA, an issuing CA anchored to it, and a SCEP certificate profile for device authentication (e.g., for Wi-Fi, VPN, or S/MIME encryption). With Cloud PKI included in your existing license, this exercise is fully hands-on; no trial activation is needed.
 
 ### Task 1: Create a root Certificate Authority
 
